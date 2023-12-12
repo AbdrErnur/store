@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store/features/auth/presentation/ui/phone_input_screen.dart';
 import 'package:store/presentation/ui/components/form_field.dart';
 import 'package:store/presentation/ui/components/primary_button.dart';
 import 'package:store/presentation/ui/screens/home_screen.dart';
@@ -69,7 +70,9 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
               }),
           const SizedBox(height: 24.0,),
-          TextButton(onPressed: (){}, child: const Text('Войти', style: TextStyle(color: Colors.black, decoration: TextDecoration.underline),)),
+          TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const PhoneInputScreen()));
+          }, child: const Text('Войти', style: TextStyle(color: Colors.black, decoration: TextDecoration.underline),)),
         ],
       ),
     );

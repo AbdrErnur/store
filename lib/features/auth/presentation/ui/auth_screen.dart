@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store/features/auth/presentation/ui/regestration_screen.dart';
 import 'package:store/presentation/ui/components/primary_button.dart';
 import 'package:store/features/auth/presentation/ui/phone_input_screen.dart';
 import 'package:store/presentation/ui/components/secondary_button.dart';
@@ -27,7 +28,9 @@ class _AuthState extends State<AuthScreen> {
             },
           ),
           const SizedBox(height: 24.0),
-          SecondaryButton(onPressed: (){},
+          SecondaryButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const RegistrationScreen()));
+          },
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               text: 'Регистрация'),
           const Spacer(),

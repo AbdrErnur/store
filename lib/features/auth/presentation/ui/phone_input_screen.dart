@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:store/presentation/ui/components/form_field.dart';
 import 'package:store/presentation/ui/components/primary_button.dart';
 import 'package:store/features/auth/presentation/ui/regestration_screen.dart';
+import 'package:store/presentation/ui/screens/home_screen.dart';
 
 class PhoneInputScreen extends StatefulWidget {
   const PhoneInputScreen({super.key});
@@ -50,7 +51,9 @@ class _PhoneInputScreenState extends State<PhoneInputScreen> {
           ),
           BrPrimaryButton(
             text: 'Войти',
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+            },
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
           ),
           const SizedBox(
