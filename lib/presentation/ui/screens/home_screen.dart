@@ -93,13 +93,19 @@ class _HomeScreenState extends State<HomeScreen>
           ),
         ),
       ),
-      // bottomNavigationBar: Padding(
-      //   padding: const EdgeInsets.all(8.0),
-      //   child: BrPrimaryButton(text: 'text', onPressed: (){}),
-      // ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: BrPrimaryButton(text: 'text', onPressed: (){}),
+      ),
     );
   }
 }
+
+
+
+
+
+
 
 class AdBannerWidget extends StatelessWidget {
   const AdBannerWidget({super.key});
